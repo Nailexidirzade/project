@@ -1,0 +1,185 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ////1_ Verilmis  ededin  reqemlerinin  hasilini  tapin.(0 olduqda 0 qaytarir,menfi olduqda musbete cevirib hesablayir)*********************************************
+            //Console.WriteLine("Eded yazin:");
+            //int eded = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine($"Edediniz____ {eded} dir");
+            //int hasil = 1;
+
+            //if (eded == 0)
+            //{
+            //    hasil = 0;
+            // }
+
+            //if (eded < 0)
+            //{
+            //    eded = -eded;
+            //}
+
+            //while (eded > 0)
+            //{
+            //    int sonreqem = eded % 10;
+            //    hasil *= sonreqem;//hasil=hasil*sonreqem
+            //    eded /= 10;
+            //}
+            //Console.WriteLine($"Reqemleri hasili_____ {hasil} dir");
+
+            //2.Verilmis ededin sade ve ya murekkeb oldugunu tapan alqoritm.****************
+
+            //Console.WriteLine("Bir ədəd daxil edin:");
+            //int eded = Convert.ToInt32(Console.ReadLine());
+
+            //if (eded == 0 || eded == 1)
+            //{
+            //    Console.WriteLine("0 və 1 nə sadə, nə də mürəkkəb ədəddir.");
+            //}
+            //else if (eded == 2 || eded == 3)
+            //{
+            //    Console.WriteLine("Sade ədəddir.");
+            //}
+            //else if (eded % 2 == 0)
+            //{
+            //    Console.WriteLine("Mürəkkəb ədəddir.");
+            //}
+            //else
+            //{
+            //    bool sade = true;
+            //    for (int i = 3; i * i <= eded; i += 2)
+            //    {
+            //        if (eded % i == 0)
+            //        {
+            //            sade = false;
+            //            break;
+            //        }
+            //    }
+
+            //    if (sade)
+            //    {
+            //        Console.WriteLine("Sade ədəddir.");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Mürəkkəb ədəddir.");
+            //    }
+            //}
+
+
+
+            //3 Arrayin icerisindeki sozlerin sirasini tersine ceviren bir alqoritm yazin
+
+            //Console.WriteLine("Bir cümlə daxil edin:");
+            //string cümle = Console.ReadLine();
+
+
+            //string[] sozler = cümle.Split(' ');
+
+
+            //string tersineCumle = "";
+            //for (int i = sozler.Length - 1; i >= 0; i--)
+            //{
+            //    tersineCumle = tersineCumle + sozler[i] + " ";
+            //}
+
+
+            //Console.WriteLine("Tərsinə çevrilmiş cümlə: ");
+            //Console.WriteLine(tersineCumle.Trim()); 
+
+
+
+
+
+            // 4.Array verilir ve n ededi daxil olunur, eger n ededi arrayin icerisindeki istenilen bir ededden boyukdurse true, deyilse false yazdirin.
+            //int[] array = { 7, 21, 9, 5 };
+            //Console.Write("N ədədini daxil edin: ");
+            //string input = Console.ReadLine();
+
+            //int n;
+            //if (int.TryParse(input, out n))
+            //{
+            //    bool found = false;
+
+
+            //    for (int i = 0; i < array.Length; i++)
+            //    {
+            //        if (n > array[i])
+            //        {
+            //            found = true;
+            //            break;
+            //        }
+            //    }
+
+            //    Console.WriteLine(found);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Xahiş olunur düzgün ədəd daxil edin.");
+            //}
+
+
+            //  5.Array - de tekrar eden elementlerin ekrana yazdırın
+
+            int[] array = { 77, 86, 33, 77, 9, 8, 23, 86, 45 }; 
+            Console.WriteLine("Təkrarlanan elementlər:");
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                bool tekrarVar = false;
+                for (int j = 0; j < i; j++)
+                {
+                    if (array[i] == array[j]) 
+                    {
+                        tekrarVar = true;
+                        break;
+                    }
+                }
+
+                if (tekrarVar)
+                {
+                    Console.WriteLine(array[i]);
+                }
+
+
+
+
+            }
+        }
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+        
+        
+   
+
